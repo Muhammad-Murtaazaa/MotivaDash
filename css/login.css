@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+:root {
+    --primary: #B288C0;
+    --secondary: #9A48D0;
+    --bg: #7E5A9B;
+    --card-bg: #E4B7E5;
+    --text: #3D246C;
+    --accent: #FFD6E0;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    width: 600px;
+    margin: 2rem auto 1rem auto;
+    background: var(--primary);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.nav-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+.navbar ul li a:hover {
+    color: var(--accent);
+}
+
+/* Login Section Styling */
+.login-section {
+    max-width: 400px;
+    margin: 4rem auto;
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: #B288C0 0 4px 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+}
+.login-section input {
+    width: 80%;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.login-section button {
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.login-section button:hover {
+    background: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .navbar {
+        width: 98%;
+        padding: 0.5rem 1vw;
+    }
+    .login-section {
+        width: 95vw;
+        padding: 1.2rem 1vw;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+}

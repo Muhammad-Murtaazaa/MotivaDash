@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">MotivaDash</span>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rate.html">Rate Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="time">
+        <h2>Current Time</h2>
+        <div id="current-time"></div>
+    </section>
+
+    <main class="dashboard-row">
+        <section class="card todos" id="todos-section">
+            <h2>To-Do List</h2>
+            <ul id="todo-list"></ul>
+            <input type="text" id="new-todo" placeholder="Add new task...">
+            <button id="add-todo">Add</button>
+        </section>
+        <section class="card quotes">
+            <h2>Motivational Quote</h2>
+            <div id="quote-text"></div>
+        </section>
+        <section class="card water" id="water">
+            <h2>Water Tracker</h2>
+            <div id="water-tracker"></div>
+            <button id="add-water">Add Water</button>
+        </section>
+        <section class="card mood" id="mood">
+            <h2>Your Mood</h2>
+            <div class="mood-options">
+                <button class="mood-btn" data-mood="happy">😊 Happy</button>
+                <button class="mood-btn" data-mood="sad">😢 Sad</button>
+                <button class="mood-btn" data-mood="tired">😴 Tired</button>
+                <button class="mood-btn" data-mood="motivated">💪 Motivated</button>
+            </div>
+            <div id="mood-quote"></div>
+        </section>
+    </main>
+
+    <section class="badges-goals-habits">
+        <div class="badges-section">
+            <h2>Achievement Badges</h2>
+            <div id="badges-list"></div>
+        </div>
+        <div class="goals-section">
+            <h2>Daily/Weekly Goals</h2>
+            <ul id="goals-list"></ul>
+            <input type="text" id="new-goal" placeholder="Add new goal...">
+            <select id="goal-type">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+            </select>
+            <button id="add-goal">Add Goal</button>
+        </div>
+        <div class="habits-section">
+            <h2>Habit Tracker</h2>
+            <ul id="habits-list"></ul>
+            <input type="text" id="new-habit" placeholder="Add new habit...">
+            <button id="add-habit">Add Habit</button>
+            <div id="habit-streaks"></div>
+        </div>
+    </section>
+
+    <button id="logout-btn" style="position:fixed;top:20px;right:20px;z-index:1000;">Logout</button>
+
+    <script>
+    
+    </script>
+    <script src="js/theme.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/water.js"></script>
+    <script src="js/mood.js"></script>
+    <script src="js/todos.js"></script>
+    <script src="js/badges.js"></script>
+    <script src="js/goals.js"></script>
+    <script src="js/habits.js"></script>
+    <script src="js/app.js"></script>
+    <!-- No need for js/app.js as it's inlined above -->
+</body>
+</html>

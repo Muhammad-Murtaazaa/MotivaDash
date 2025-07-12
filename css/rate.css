@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+:root {
+    --primary: #B288C0;
+    --secondary: #9A48D0;
+    --bg: #7E5A9B;
+    --card-bg: #E4B7E5;
+    --text: #3D246C;
+    --accent: #FFD6E0;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 600px;
+    margin: 2rem auto 1rem auto;
+    background: var(--primary);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.nav-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+.navbar ul li a:hover {
+    color: var(--accent);
+}
+
+
+/* Rate Section Styling */
+.rate-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+    transition: box-shadow var(--transition);
+}
+
+.rate-section:hover {
+    box-shadow: 0 8px 32px rgba(61,36,108,0.15);
+}
+
+.rate-section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.rate-stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s, transform 0.2s;
+    filter: drop-shadow(0 1px 1px rgba(61,36,108,0.1));
+}
+.star.selected,
+.star.hovered {
+    color: var(--primary);
+    transform: scale(1.15);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .navbar, .rate-section {
+        width: 98%;
+        max-width: 98vw;
+        padding: 1rem 1vw;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .rate-section h2 {
+        font-size: 1.4rem;
+    }
+    .rate-stars {
+        font-size: 2rem;
+    }
+}

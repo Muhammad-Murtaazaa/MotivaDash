@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rate Us - MotivaDash</title>
+    <link rel="stylesheet" href="css/rate.css">
+</head>
+<body>
+    <!-- Navbar here -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">MotivaDash</span>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rate.html">Rate Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="card rate-section">
+        <h2>Rate Us</h2>
+<div class="rate-stars">
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+  <span class="star">&#9733;</span>
+</div>
+
+        <div id="rate-message"></div>
+    </section>
+    <script src="js/theme.js"></script>
+    <script>
+ const stars = document.querySelectorAll('.star');
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    stars.forEach((s, i) => {
+      if (i <= index) {
+        s.classList.add('selected');
+      } else {
+        s.classList.remove('selected');
+      }
+    });
+  });
+});
+    </script>
+</body>
+</html>
